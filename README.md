@@ -84,7 +84,7 @@ sudo ss -tulnp | grep :80
 - `-tulnp`：`-t`（TCPのみ）、`-u`（UDPも含める）、`-l`（LISTEN状態のみ）、`-n`（数値表示）、`-p`（プロセス情報表示）。
 - `grep :80`：80番ポート（HTTPデフォルトポート）の記録のみを抽出。
 
-![05-nginx-stauts](screenshots\05-nginx-stauts.png)
+![05-nginx-stauts](screenshots/05-nginx-stauts.png)
 
 **`05-nginx-stauts.png`** （`curl -I` および `ss -tulnp` の正常な実行結果）
 
@@ -163,15 +163,15 @@ sudo systemctl reload nginx
 >
 > ⚠️ **「構文が通ること」と「サービスが利用可能であること」はイコールではない。**
 
-![02-404-error](screenshots\02-404-error.png)
+![02-404-error](screenshots/02-404-error.png)
 
-![04-404-log](screenshots\04-404-log.png)
+![04-404-log](screenshots/04-404-log.png)
 
 **`02-404-error.png`**  **`04-404-log`** （404障害発生時の curl 結果） 
 
-![03-403-error](screenshots\03-403-error.png)
+![03-403-error](screenshots/03-403-error.png)
 
-![09-trigger-403](screenshots\09-trigger-403.png)
+![09-trigger-403](screenshots/09-trigger-403.png)
 
 **`03-403-error.png`**    **`09-trigger-403`** （403障害発生時の curl 結果）
 
@@ -215,7 +215,7 @@ sudo journalctl -u nginx --since "10 minutes ago" -n 50
 - `--since "10 minutes ago"`：直近10分間のログに限定する運用上の必須パラメータ。
 - `-n 50`：直近50件に制限。
 
-![07-system-log](screenshots\07-system-log.png)
+![07-system-log](screenshots/07-system-log.png)
 
 **`07-system-log.png`**（journalctl の実行結果）
 
@@ -242,7 +242,7 @@ sudo nginx -t
 sudo systemctl reload nginx
 ```
 
-![08-fix-404](screenshots\08-fix-404.png)
+![08-fix-404](screenshots/08-fix-404.png)
 
 **`08-fix-404.png`**（ロールバックおよびリロード実行の様子）
 
@@ -262,7 +262,7 @@ sudo tail -n 20 /var/log/nginx/error.log
 # → failed (13: Permission denied)
 ```
 
-![09-trigger-403](screenshots\09-trigger-403.png)
+![09-trigger-403](screenshots/09-trigger-403.png)
 
 **`09-trigger-403.png`**（404修復後に403が顕在化する様子）
 
@@ -281,7 +281,7 @@ curl -I http://localhost/index.html | grep HTTP
 # → HTTP/1.1 200 OK
 ```
 
-![11-fix-403](screenshots\11-fix-403.png)
+![11-fix-403](screenshots/11-fix-403.png)
 
 **`11-fix-403.png`**（chmod 644 実行と最終復旧確認の様子）
 
@@ -317,7 +317,7 @@ cat << EOF >> change.log
 EOF
 ```
 
-![12-final-record](screenshots\12-final-record.png)
+![12-final-record](screenshots/12-final-record.png)
 
 **`12-final-record.png`**（change.log の最終記録内容）
 
