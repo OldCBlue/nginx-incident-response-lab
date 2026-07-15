@@ -193,15 +193,15 @@ sudo tail -n 20 /var/log/nginx/error.log
 - **手法A（403権限エラー）の場合**： `... [error] ... open() "/usr/share/nginx/html/index.html" failed (13: Permission denied) ...` → Linuxファイル権限の問題。`chmod` による修復が必要。
 - **手法B（404パスエラー）の場合**： `... [error] ... "no such file or directory" ...` → 設定ファイルの `root` パスまたはリクエストファイル名の誤り。
 
-![04-404-log](screenshots\04-404-log.png)
+![04-404-log](screenshots/04-404-log.png)
 
 **`04-404-log.png`**（404原因を示す error.log の抜粋） 
 
-![10-permission-error](screenshots\10-permission-error.png)
+![10-permission-error](screenshots/10-permission-error.png)
 
 **`10-permission-error.png`**（403原因を示す Permission denied ログ） 
 
-![06-error-log](screenshots\06-error-log.png)
+![06-error-log](screenshots/06-error-log.png)
 
 **`06-error-log.png`**（error.log 確認全体像）
 
