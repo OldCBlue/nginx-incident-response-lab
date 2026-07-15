@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-------
-
 # 👑 Nginx 障害対応演習
 
 ## 📖 演習概要
@@ -55,7 +52,7 @@ sudo systemctl enable nginx
 sudo systemctl status nginx
 ```
 
-![01-nginx-normal](E:\GitHub\nginx-incident-response-lab\screenshots\01-nginx-normal.png)
+![01-nginx-normal](screenshots/01-nginx-normal.png)
 
 **`01-nginx-normal.png`** 
 
@@ -344,5 +341,3 @@ EOF
 - 複数の障害要因が連鎖的に存在する場合の段階的トラブルシューティング手法
 - 変更管理・履歴記録の重要性（実務運用における必須プロセス）
 =======
-# nginx-incident-response-lab
->>>>>>> 39608277f773683dd285fa0689f851f739106d65
